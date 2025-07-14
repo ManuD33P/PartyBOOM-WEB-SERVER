@@ -2,6 +2,7 @@ import { Socket } from "socket.io";
 import { EVENT_EMIT } from "../const/EVENT_EMIT.ts";
 import { Player,PlayerProps } from "../../Controllers/index.ts";
 import { IData } from "../const/data.ts";
+
 export function handleJoinRoom(socket:Socket, data:IData){
     //Completar esta funcion con un roomMagener
     const idRoom = data.idRoom.toString();
