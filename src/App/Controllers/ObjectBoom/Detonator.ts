@@ -3,7 +3,7 @@ import { IBoom } from "./Boom.ts";
 
 
 export interface IDetonator {
-    start: () => void;
+    start():void;
 
 }
 export class Detonator implements IDetonator{

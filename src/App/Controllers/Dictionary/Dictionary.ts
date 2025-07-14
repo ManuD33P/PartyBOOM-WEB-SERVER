@@ -2,11 +2,11 @@ import { loadFile } from "../../../utils/loadFileGame.ts";
 
 
 export interface IDictionary{
-    hasWord: (word: string)=> boolean;
-    setWord: (word:string) => void;
-    size: () => number;
-    setSyllable: (syl: string)=> void;
-    getRandomSyllable: () => string; 
+    hasWord(word: string): boolean;
+    setWord (word:string) : void;
+    size() : number;
+    setSyllable(syl: string): void;
+    getRandomSyllable() :string; 
 
 }
 

@@ -3,12 +3,12 @@ interface ISound{
     boomSound: string;
 }
 export interface IBoom{
-    setTime: (time: number)=> void;
-    getTime: ()=> number;
-    getSound: ()=> ISound;
-    decrementTime: ()=> number;
-    increase: (time: number) => number;
-    isExploded: ()=> boolean;
+    setTime(time: number) : void;
+    getTime(): number;
+    getSound(): ISound;
+    decrementTime(): number;
+    increase(time: number): number;
+    isExploded():boolean;
 }
 
 
