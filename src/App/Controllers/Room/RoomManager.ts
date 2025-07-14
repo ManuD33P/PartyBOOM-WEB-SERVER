@@ -1,5 +1,5 @@
-import {IGameRoomConfig,ObjectRoom,IObjectRoom } from "./ObjectRoom";
-import { IPlayer, Player, PlayerProps } from "../Player/Player";
+import {IGameRoomConfig,ObjectRoom,IObjectRoom } from "./ObjectRoom.ts";
+import { IPlayer, Player, PlayerProps } from "../Player/Player.ts";
 
 interface PlayerData {
     name:string
