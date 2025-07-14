@@ -6,7 +6,7 @@ import { Detonator, IDetonator } from "../ObjectBoom/Detonator.ts";
 
 
 interface IGame{
-    start(): void;
+    init(): void;
 }
 class Game{
     private playerIterator:IPlayerIterator = new PlayerIterator();
@@ -14,7 +14,7 @@ class Game{
 
     ){}
 
-    start(){
+    init(){
         // initi    
     }
 

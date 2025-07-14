@@ -6,13 +6,14 @@ export interface PlayerProps{
 }
 
 export interface IPlayer{
-    setName: (name:string)=> void;
-    getName: ()=> string;
-    setLife: (life:number)=> void;
-    getLife: ()=> number;
-    subtractLife: ()=> void; 
-    setIdRoom: (idRoom:string)=> void;
-    getIdRoom: ()=> string;
+    setName(name:string): void;
+    getName(): string;
+    setLife(life:number): void;
+    getLife(): number;
+    subtractLife(): void; 
+    setIdRoom(idRoom:string): void;
+    getIdRoom(): string;
+    getIdPlayer(): string;
 }
 
 export class Player implements IPlayer{
@@ -50,5 +51,8 @@ export class Player implements IPlayer{
 
     subtractLife(){
         if(this.life) this.life--;
+    }
+    getIdPlayer(): string {
+        return this.id;
     }
 }
