@@ -1,3 +1,4 @@
+import { IGame,Game } from "../Game/Game.ts";
 import { IPlayer } from "../Player/Player.ts";
 
 export interface IGameRoomConfig {
@@ -22,10 +23,12 @@ export interface IObjectRoom{
     isPlayerExist(id:string): Boolean;
     isOwner(name:string): Boolean;
     startGame(): void;
+    getGame(): IGame | null;
 }
 
 export class ObjectRoom implements IObjectRoom{
     private players: Map<string,IPlayer> = new Map()
+    private game:IGame | null = null;
     // private game?: Game 
     constructor(private config:IGameRoomConfig){}
 
@@ -54,7 +57,20 @@ export class ObjectRoom implements IObjectRoom{
     isPlayerExist(id: string): Boolean {
         return this.players.has(id);
     }
-    startGame(): void {
-        
+    startGame(): Boolean {
+        this.game = new Game(
+            {
+                players:this.players,
+                config:this.config
+            }
+        );
+        if(!this.game) return false
+        this.game.init();
+        return true;
     }
+
+    getGame(){
+        return this.game || null;
+    }
+
 }

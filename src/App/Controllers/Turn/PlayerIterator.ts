@@ -2,7 +2,7 @@ import { IPlayer } from "../Player/Player.ts";
 
 export interface IPlayerIterator{
     next(): IPlayer | null;
-    reset():  void;
+    reset(lifes:number):  void;
     getWinPlayer(): IPlayer | null;
     getPlayers(): IPlayer[];
     setPlayers(players:IPlayer[]): void;
@@ -36,9 +36,9 @@ export class PlayerIterator implements IPlayerIterator{
         return nextPlayer?.getName() !== this.players[startIndex].getName() ? nextPlayer : null
     }
 
-    reset(): void{
+    reset(lifes:number): void{
         this.index = -1;
-        this.players.forEach((p) => p.setLife(3))
+        this.players.forEach((p) => p.setLife(lifes))
     }
 
     getWinPlayer(): IPlayer | null {

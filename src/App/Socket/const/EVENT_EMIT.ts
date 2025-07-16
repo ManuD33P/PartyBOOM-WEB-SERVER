@@ -10,10 +10,14 @@ export const EVENT_EMIT = {
     "PLAYER_LEFT": "player-left",
 
     "SEND_WORD": "send-word",
+    "RECV_WORD": "recv-word",
     "WORD_RESULT": "word-result",
 
+    "GAME_START": "game-start",
     "NEW_TURN": "new-turn",
     "GAME_OVER": "game-over",
+
+    "BOOM" : "game-boom",
 
     "ERROR": "error",
     "MESSAGE": "message"
