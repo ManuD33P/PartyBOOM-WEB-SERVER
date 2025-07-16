@@ -33,3 +33,8 @@ PartyBoom es un juego multijugador por turnos en el que cada jugador debe respon
 - **Node.js** – Entorno de ejecución JavaScript para backend.
 - **ESModules** – Importaciones modernas con módulos nativos.
 - **Arquitectura modular** – Código organizado por responsabilidad (Game, Turno, Jugador, Bomba).
+
+---
+
+## !! Mas info:
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/ManuD33P/PartyBOOM-WEB-SERVER)
