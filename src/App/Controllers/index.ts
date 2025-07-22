@@ -5,3 +5,4 @@ export * from "./ObjectBoom/Detonator.ts";
 export * from "./Dictionary/Dictionary.ts";
 export * from "./Room/RoomManager.ts"
 export * from "./Room/ObjectRoom.ts"
+export * from "./ListUsers/ListUsers.ts"
