@@ -27,8 +27,8 @@ export const registerEvent = (io:Server) : void => {
         socket.on(EVENT_EMIT.LIST_USERS, ()=> handleListUsers(socket));
         socket.on(EVENT_EMIT.DISCONNECT, ()=> handleUserDisconnect(socket));
         
-        const listRooms = managerGameRoom.getAllRooms();
+        const userList = listUsers.getUsers();
 
-        io.emit(EVENT_EMIT.ROOM_LIST, listRooms);
+        io.emit(EVENT_EMIT.LIST_USERS, userList);
     });
 }
